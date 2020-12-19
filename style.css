@@ -22,6 +22,7 @@ body {
     background-color: hsl(250, 50%, 50%);
     margin: 20px;
     margin-top: 10px;
+    transition: 0.5s ease-in;
 }
 
 .light::before {
@@ -134,4 +135,46 @@ body {
 
 .general__controls {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.general__controls__switch {
+    margin-right: 40px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 10px;
+    transition: 0.5s ease-out;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.general__controls__switch__on {
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    
+}
+
+
+.general__controls__switch__off {
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+.active {
+    border: 2px solid hsl(120, 50%, 50%);
 }
