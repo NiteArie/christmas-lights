@@ -118,3 +118,20 @@ body {
     }
 }
 
+/* General */
+
+.general {
+    margin-top: 100px;
+}
+
+.general__title {
+    font-size: 56px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 30px white;
+    letter-spacing: 0.5em;
+}
+
+.general__controls {
+    margin-top: 50px;
+}
