@@ -49,3 +49,72 @@ body {
 .light:last-child::after {
     border-bottom: none;
 }
+
+.red {
+    background-color: hsl(0, 70%, 50%);
+    animation: glow-red 1s infinite;
+    transition: 1s linear;
+}
+
+.green {
+    background-color: hsl(120, 70%, 50%);
+    animation: glow-green 1s infinite;
+    transition: 1s linear;
+}
+
+.blue {
+    background-color: hsl(220, 70%, 50%);
+    animation: glow-blue 1s infinite;
+    transition: 1s linear;
+}
+
+.orange {
+    background-color: hsl(30, 70%, 50%);
+    animation: glow-orange 1s infinite;
+    transition: 1s linear;
+}
+
+@keyframes glow-red {
+    0%, 
+    100% {
+        box-shadow: 0 0 20px 5px hsl(0, 50%, 50%);
+    }
+
+    50% {
+        box-shadow: none;
+    }
+}
+
+@keyframes glow-green {
+    0%,
+    100% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 20px 5px hsl(120, 50%, 50%);
+    }
+}
+
+@keyframes glow-blue {
+    0%,
+    100% {
+        box-shadow: 0 0 20px 5px hsl(230, 50%, 50%);
+    }
+
+    50% {
+        box-shadow: none;
+    }
+}
+
+@keyframes glow-orange {
+    0%,
+    100% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 20px 5px hsl(20, 50%, 50%);
+    }
+}
+
