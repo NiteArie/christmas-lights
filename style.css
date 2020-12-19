@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: hsl(0, 0%, 0%, 0.9);
+}
+
+.lights {
+    display: flex;
+    justify-content: center;
+}
+
+.light {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: hsl(250, 50%, 50%);
+    margin: 20px;
+    margin-top: 10px;
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 11px;
+    height: 11px;
+    background-color: hsl(10, 50%, 50%);
+    border-bottom: 1px solid hsl(210, 0%, 100%);
+}
+
+.light::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    width: 85px;
+    left: 20px;
+    height: 15px;
+    border-radius: 100%;
+    border-bottom: 2px solid hsl(0, 30%, 50%);
+}
+
+.light:last-child::after {
+    border-bottom: none;
+}
