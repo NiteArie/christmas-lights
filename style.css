@@ -137,6 +137,7 @@ body {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    
 }
 
 .general__controls__switch {
@@ -177,4 +178,35 @@ body {
 
 .active {
     border: 2px solid hsl(120, 50%, 50%);
+}
+
+.general__controls__form {
+    margin-top: 10px;
+    flex-basis: 300px;
+}
+
+.general__controls__form__input {
+    width: 200px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;   
+}
+
+.general__controls__form__intensity {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid grey;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.general__controls__form__intensity:hover {
+    border: 2px solid grey;
+    background-color: transparent;
 }

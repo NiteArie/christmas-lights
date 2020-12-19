@@ -2,7 +2,11 @@ let controls = (() => {
     let lights = document.querySelectorAll('.light');
     let _onButton = document.querySelector('.general__controls__switch__on');
     let _offButton = document.querySelector(".general__controls__switch__off");
+    let _intensityInput = document.querySelector('.general__controls__form__input-intensity');
+    let _intensityButton = document.querySelector('.general__controls__form__intensity');
     let lightState = true;
+
+    activeButton();
 
     _onButton.addEventListener('click', (event) => {
         if ( lightState ) {
@@ -24,6 +28,21 @@ let controls = (() => {
         toggleLight();
         removeActiveButton();
         activeButton();
+    })
+
+    _intensityButton.addEventListener('click', (event) => {
+        if (!lightState) {
+            return;
+        }
+
+        let value = Number.parseFloat(_intensityInput.value);
+
+        if ( isNaN(value) ) {
+            return;
+        }
+
+        changeLightsIntensity(value);
+        
     })
 
     function toggleLight() {
@@ -55,4 +74,11 @@ let controls = (() => {
             _offButton.classList.add('active');
         }
     }
+
+    function changeLightsIntensity(value) {
+        for ( let i = 0; i < lights.length; i++ ) {
+            lights[i].style.animationDuration = `${value}s`;
+        }
+    }
+
 })();
